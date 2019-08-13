@@ -5,7 +5,7 @@ import subprocess
 cred = ["root:toor"]
 sck = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_addr = ('127.0.0.1', 333)
-sck.setsockopt(socket.SOL_SCOKET, socket.SO_REUSEADDR, 1)
+sck.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 sck.bind(server_addr)
 sck.listen(5)
 
