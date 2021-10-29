@@ -12,9 +12,9 @@ while True:
     connection , client_address = sock.accept()
     print(f"[*] New connection from {client_address}")
     try:
-        connection.send(b"Username: ")
+        connection.send(b"[*] Username: ")
         username = connection.recv(32).strip().decode('utf-8')
-        connection.send(b"Password: ")
+        connection.send(b"[*] Password: ")
         password = connection.recv(32).strip().decode('utf-8')
         if "{0}:{1}".format(username, password) in credentials:
             connection.send(b"\nWelcome to socket server panel. \n")
@@ -26,7 +26,7 @@ while True:
                     break
                 if data == "shell":
                     while True:
-                        connection.send(b"SHELL: ")
+                        connection.send(b"shell >>: ")
                         datapoint = connection.recv(2048)
                         proc = subprocess.Popen(datapoint, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
                         stdout_value = b'\n' + proc.stdout.read() + proc.stderr.read() + b'\n'
