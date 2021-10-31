@@ -2,7 +2,7 @@
   <a href="https://github.com/thiiagoms/shell-server">
     <img src="assets/payload.png" alt="Logo" width="80" height="80">
   </a>
-     <h3 align="center">Simple payload with Python! :bucket:</h3>
+     <h3 align="center">Simple payload with Python! :rocket:</h3>
 </p>
 
 Execute commands, get info about system with this little pythonic example. You **MUST** use this example **ONLY** for educational purposes.
